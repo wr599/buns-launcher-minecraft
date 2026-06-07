@@ -1,0 +1,4 @@
+requests
+psutil
+Pillow
+PySide6
