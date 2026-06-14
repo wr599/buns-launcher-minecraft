@@ -18,8 +18,8 @@ AppPublisherURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
-; Лицензия (опционально — если есть LICENSE.txt)
-; LicenseFile=LICENSE.txt
+; Лицензия GPL-3.0
+LicenseFile=LICENSE
 OutputDir=installer_output
 OutputBaseFilename=BunLauncher_Setup
 SetupIconFile=assets\bun.png

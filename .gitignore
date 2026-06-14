@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+
+# Сборка и артефакты
+build/
+dist/
+*.spec.bak
+bundle/
+bundle.tar.xz
+installer_output/
+*.exe
+
+# IDE и редакторы
+.vscode/
+.idea/
+*.code-workspace
+
+# ОС
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Локальные данные лаунчера
+launcher_config.json
+.installed
+
+# Архивы (не хранить в репозитории)
+*.zip
+*.tar.xz
+
+# Логи
+*.log
