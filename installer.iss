@@ -32,8 +32,8 @@ LZMAUseSeparateProcess=yes
 LZMANumBlockThreads=4
 ; Внешний вид
 WizardStyle=modern
-WizardImageFile=assets\installer_banner.bmp
-WizardSmallImageFile=assets\installer_icon.bmp
+; WizardImageFile=assets\installer_banner.bmp
+; WizardSmallImageFile=assets\installer_icon.bmp
 ; Минимальная версия Windows
 MinVersion=10.0
 ; Размер диска

@@ -8,6 +8,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
+env:
+  PYTHONIOENCODING: utf-8
+  PYTHONUTF8: "1"
+
 concurrency:
   group: build-${{ github.ref }}
   cancel-in-progress: true
