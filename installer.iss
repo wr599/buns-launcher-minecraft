@@ -22,7 +22,7 @@ DisableProgramGroupPage=yes
 LicenseFile=LICENSE
 OutputDir=installer_output
 OutputBaseFilename=BunLauncher_Setup
-SetupIconFile=assets\bun.png
+SetupIconFile=assets\bun.ico
 ; Иконка программы
 UninstallDisplayIcon={app}\{#MyAppExeName}
 ; Сжатие — максимальное LZMA2

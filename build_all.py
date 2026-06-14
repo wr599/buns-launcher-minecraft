@@ -127,9 +127,12 @@ def main():
             print("  Используем: bundle/ (несжатый)")
 
         icon_arg = ""
-        if (ROOT / "assets" / "bun.png").exists():
-            # PyInstaller на Windows предпочитает .ico — но .png тоже работает
-            icon_arg = '--icon "assets/bun.png"'
+        ico = ROOT / "assets" / "bun.ico"
+        png = ROOT / "assets" / "bun.png"
+        if ico.exists():
+            icon_arg = f'--icon "{ico}"'
+        elif png.exists():
+            icon_arg = f'--icon "{png}"'
 
         cmd = (
             f'{sys.executable} -m PyInstaller --onefile --noconsole '
