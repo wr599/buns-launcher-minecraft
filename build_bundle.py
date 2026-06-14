@@ -26,6 +26,20 @@ ROOT = Path(__file__).parent
 BUNDLE = ROOT / "bundle"
 
 
+def get_java_urls(manifest: dict) -> list:
+    """URL Java для текущей платформы из manifest.json."""
+    key = {
+        "Windows": "java_windows",
+        "Darwin": "java_macos",
+    }.get(platform.system(), "java_linux")
+    platform_cfg = manifest.get(key, {})
+    if isinstance(platform_cfg, dict):
+        urls = platform_cfg.get("urls", [])
+        if urls:
+            return urls
+    return manifest.get("java_urls", [])
+
+
 def log(msg):
     print(f"[BUILD] {msg}")
 
@@ -72,7 +86,7 @@ def main():
     mc_version = manifest.get("minecraft_version")
     java_version = manifest.get("java_version")
     neo_version = manifest.get("neoforge_version")
-    java_urls = manifest.get("java_urls", [])
+    java_urls = get_java_urls(manifest)
     neo_urls = manifest.get("neoforge_urls", [])
     archive_urls = manifest.get("archive_urls", [])
     archive_sha256 = manifest.get("archive_sha256", "")
